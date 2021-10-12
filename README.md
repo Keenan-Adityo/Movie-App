@@ -1,6 +1,6 @@
 # movie_app
 
-A new Flutter project.
+Movie Info App - The Flutter Way with some extensions.
 
 ## Getting Started
 
