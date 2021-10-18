@@ -8,3 +8,4 @@ import 'dart:math' as math;
 part 'category.dart';
 part 'genres_card.dart';
 part 'movie_card.dart';
+part 'detailheader.dart';

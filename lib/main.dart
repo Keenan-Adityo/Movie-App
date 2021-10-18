@@ -14,7 +14,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      initialRoute : '/home',
+      routes: {
+        '/home': (context) => HomeScreen(),
+        'detail': (context) => DetailScreen(ModalRoute.of(context)!.settings.arguments),
+      },
+      home: HomeScreen(),
     );
   }
 }
