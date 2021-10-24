@@ -1,4 +1,7 @@
-part of 'widgets.dart';
+
+
+import 'package:flutter/material.dart';
+import 'package:movie_app/styles.dart';
 
 class CategoryList extends StatefulWidget {
   @override

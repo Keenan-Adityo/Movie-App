@@ -1,4 +1,11 @@
-part of 'pages.dart';
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:movie_app/styles.dart';
+import 'package:movie_app/ui/widgets/category.dart';
+import 'package:movie_app/ui/widgets/genres_card.dart';
+import 'package:movie_app/ui/widgets/movie_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,7 +18,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[
           CategoryList(),
-          Genres(),
+          GenresHome(),
           SizedBox(
             height: kDefaultPadding,
           ),

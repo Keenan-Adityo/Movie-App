@@ -1,4 +1,9 @@
-part of 'widgets.dart';
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:movie_app/models/movie.dart';
+import 'package:movie_app/styles.dart';
 
 class Header extends StatelessWidget {
   const Header({

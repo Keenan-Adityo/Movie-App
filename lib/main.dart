@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/ui/pages/pages.dart';
+import 'package:movie_app/ui/pages/detail.dart';
+import 'package:movie_app/ui/pages/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,10 +15,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute : '/home',
+      initialRoute: '/home',
       routes: {
         '/home': (context) => HomeScreen(),
-        'detail': (context) => DetailScreen(ModalRoute.of(context)!.settings.arguments),
+        'detail': (context) =>
+            DetailScreen(ModalRoute.of(context)!.settings.arguments),
       },
       home: HomeScreen(),
     );

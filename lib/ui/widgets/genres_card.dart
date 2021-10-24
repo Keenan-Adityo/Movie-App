@@ -1,7 +1,11 @@
-part of 'widgets.dart';
 
-class Genres extends StatelessWidget {
-  const Genres({Key? key}) : super(key: key);
+
+import 'package:flutter/material.dart';
+import 'package:movie_app/models/movie.dart';
+import 'package:movie_app/styles.dart';
+
+class GenresHome extends StatelessWidget {
+  const GenresHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +25,32 @@ class Genres extends StatelessWidget {
         itemCount: genres.length,
         itemBuilder: (context, index) => GenreCard(
           genre: genres[index],
+        ),
+      ),
+    );
+  }
+}
+
+class GenresDetail extends StatelessWidget {
+  const GenresDetail({
+    Key? key,
+    required this.movie,
+  }) : super(key: key);
+
+  final Movie movie;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+      child: SizedBox(
+        height: 36,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: movie.genra.length,
+          itemBuilder: (context, index) => GenreCard(
+            genre: movie.genra[index],
+          ),
         ),
       ),
     );
